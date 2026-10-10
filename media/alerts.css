@@ -1,0 +1,74 @@
+/*
+ * Styling for the alerts rendered by extension.js.
+ *
+ * Colours come from the editor's own theme variables, so an alert looks correct
+ * in any theme, light or dark. The hard-coded fallbacks are GitHub's palette, for
+ * the case where a variable is not defined.
+ *
+ * Deliberately not GitHub's exact look: a preview that imitates a web page inside
+ * the editor tends to look wrong. GitHub's structure and colours are kept; the
+ * chrome is the editor's.
+ */
+
+.markdown-alert {
+  margin: 1em 0;
+  padding: 0.6em 1em;
+  border-left: 4px solid var(--vscode-textBlockQuote-border, #d0d7de);
+  border-radius: 4px;
+  background-color: var(--vscode-textBlockQuote-background, transparent);
+}
+
+.markdown-alert > :first-child {
+  margin-top: 0;
+}
+
+.markdown-alert > :last-child {
+  margin-bottom: 0;
+}
+
+.markdown-alert-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  font-weight: 600;
+}
+
+.markdown-alert-title svg {
+  flex: none;
+}
+
+/* One colour per type, used for both the bar and the title. */
+.markdown-alert-note {
+  border-left-color: var(--vscode-charts-blue, #0969da);
+}
+.markdown-alert-note .markdown-alert-title {
+  color: var(--vscode-charts-blue, #0969da);
+}
+
+.markdown-alert-tip {
+  border-left-color: var(--vscode-charts-green, #1a7f37);
+}
+.markdown-alert-tip .markdown-alert-title {
+  color: var(--vscode-charts-green, #1a7f37);
+}
+
+.markdown-alert-important {
+  border-left-color: var(--vscode-charts-purple, #8250df);
+}
+.markdown-alert-important .markdown-alert-title {
+  color: var(--vscode-charts-purple, #8250df);
+}
+
+.markdown-alert-warning {
+  border-left-color: var(--vscode-charts-yellow, #9a6700);
+}
+.markdown-alert-warning .markdown-alert-title {
+  color: var(--vscode-charts-yellow, #9a6700);
+}
+
+.markdown-alert-caution {
+  border-left-color: var(--vscode-charts-red, #cf222e);
+}
+.markdown-alert-caution .markdown-alert-title {
+  color: var(--vscode-charts-red, #cf222e);
+}

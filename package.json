@@ -1,0 +1,37 @@
+{
+  "name": "github-markdown-alerts",
+  "displayName": "GitHub markdown alerts",
+  "description": "Renders GitHub-style alerts (> [!NOTE], [!TIP], [!IMPORTANT], [!WARNING], [!CAUTION]) in the built-in markdown preview.",
+  "version": "1.0.0",
+  "publisher": "Charlie Roche",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "markdown",
+    "alerts",
+    "callouts",
+    "github"
+  ],
+  "main": "./extension.js",
+  "browser": "./extension.js",
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": [
+      "./media/alerts.css"
+    ]
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "devDependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}
