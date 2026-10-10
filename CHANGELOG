@@ -1,0 +1,9 @@
+# Changelog
+
+## [1.0.0] - 2026-10-10
+
+### Added
+
+- Initial public release of the VS Code extension.
+- Core extension functionality.
+- Support for compatible VS Code-based editors like Hugo.
