@@ -5,6 +5,11 @@
   "version": "1.0.0",
   "publisher": "crackitty",
   "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#0969da",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/crackitty/github-markdown-alerts"

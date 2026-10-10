@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- A GitHub-style alert block: a rounded tile with the accent bar down the left
+       and the body text beside it. The bar is what makes it read as a callout rather
+       than a document, and it is the one feature that survives being drawn at 24px
+       in the extensions sidebar. -->
+  <rect width="256" height="256" rx="54" fill="#0969da"/>
+  <rect x="46" y="54" width="16" height="148" rx="8" fill="#ffffff"/>
+  <rect x="88" y="72" width="126" height="24" rx="12" fill="#ffffff"/>
+  <rect x="88" y="117" width="98" height="24" rx="12" fill="#ffffff" fill-opacity="0.85"/>
+  <rect x="88" y="162" width="68" height="24" rx="12" fill="#ffffff" fill-opacity="0.68"/>
+</svg>

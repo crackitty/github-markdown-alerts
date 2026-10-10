@@ -16,3 +16,7 @@ node_modules/**
 **/*.ts
 tsconfig.json
 eslint.config.*
+
+# The SVG is the source the PNG is rendered from. The registry reads only the PNG, so
+# the source belongs in git rather than in every download.
+images/*.svg
