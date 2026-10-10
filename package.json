@@ -3,7 +3,7 @@
   "displayName": "GitHub markdown alerts",
   "description": "Renders GitHub-style alerts (> [!NOTE], [!TIP], [!IMPORTANT], [!WARNING], [!CAUTION]) in the built-in markdown preview.",
   "version": "1.0.0",
-  "publisher": "crckitty",
+  "publisher": "crackitty",
   "license": "MIT",
   "repository": {
     "type": "git",

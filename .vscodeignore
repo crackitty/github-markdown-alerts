@@ -1,0 +1,18 @@
+# Tests are the largest thing in this repository and nothing at runtime reads them.
+# The extension is a single self-contained extension.js; test/ is development only.
+test/**
+
+# Development plumbing that has no meaning to a user who installs the extension.
+.vscode/**
+.github/**
+.gitignore
+.vscodeignore
+package-lock.json
+node_modules/**
+
+# Things that are built or packaged rather than source.
+**/*.vsix
+**/*.map
+**/*.ts
+tsconfig.json
+eslint.config.*

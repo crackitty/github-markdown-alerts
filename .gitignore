@@ -1,0 +1,7 @@
+node_modules/
+
+# Packaged output. Rebuilt from source, never committed.
+*.vsix
+
+# Local editor and OS noise.
+.DS_Store
