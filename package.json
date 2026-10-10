@@ -3,7 +3,7 @@
   "displayName": "GitHub markdown alerts",
   "description": "Renders GitHub-style alerts (> [!NOTE], [!TIP], [!IMPORTANT], [!WARNING], [!CAUTION]) in the built-in markdown preview.",
   "version": "1.0.0",
-  "publisher": "Charlie Roche",
+  "publisher": "crckitty",
   "license": "MIT",
   "engines": {
     "vscode": "^1.70.0"
