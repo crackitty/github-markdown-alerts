@@ -12,21 +12,17 @@ It renders the five types GitHub supports — `NOTE`, `TIP`, `IMPORTANT`,
 `WARNING`, `CAUTION` — as coloured callouts with GitHub's own icons, in the
 preview and in the markdown editor of VS Code (web), which is what students use.
 
-## Why this exists, and why we own it
+## Why this exists, and why created it
 
-The same markdown is read in three places: on github.com, on the docs site (Hugo,
-which renders alerts through Hextra), and in the workspace's markdown preview.
-GitHub and the docs site understand alerts; VS Code's preview does not, so the
-reader gets a quoted paragraph with a literal `[!TIP]` in it.
+The default comments we have in standard Markdown are very basic and don't support
+the nicely formatted ones that are available in GitHub style Markdown.
 
-The obvious fix is an extension, and the one usually recommended —
-`saeris.markdown-github-alerts` — **is not on Open VSX**, which is the only
-registry code-server can install from at runtime. Rather than vendor someone
-else's VSIX or point the editor at the Microsoft Marketplace (which its terms do
-not allow for non-VS Code products), this is our own: about 150 lines, no
-dependencies, MIT.
+Using this extension allow you to write normal markdown and include this minimal
+extension so we can have richer comments in the VS Code Markdown Previews in our
+IDE. It also works well with Hugo based documentation sites and renders as it should
+in GitHub also.
 
-## What it does, precisely
+## How to use it in your Markdown
 
 The recogniser follows the reference tests in
 [Markdig's `AlertBlockSpecs.md`](https://github.com/xoofx/markdig/blob/main/src/Markdig.Tests/Specs/AlertBlockSpecs.md),
@@ -84,39 +80,3 @@ a mixed-case marker then rendered in neither. The tests cover `[!Tip]` and
 
 Bodies keep working as markdown: code fences, inline code, multiple paragraphs and
 nested blockquotes all survive, and a nested quote stays a quote inside the alert.
-
-## Install
-
-There is no VSIX to build: the extension is plain CommonJS, so it is installed by
-copying the directory into code-server's extensions directory under the
-`<publisher>.<name>-<version>` name VS Code expects:
-
-```bash
-cp -r github-markdown-alerts \
-  ~/.local/share/code-server/extensions/k8s4ops.markdown-alerts-1.0.0
-```
-
-In the course workspace the image carries a copy at `/opt/k8s4ops-extensions/` and
-the startup script performs that copy on every start, so a workspace picks up any
-change on its next start without an image rebuild of the home directory. Restart
-the workspace (or the code-server process) for it to load.
-
-To check it is installed:
-
-```bash
-code-server --list-extensions | grep markdown-alerts
-```
-
-## Test
-
-The tests are ported from the reference cases above, so a failure means the
-preview would disagree with GitHub about what an alert is:
-
-```bash
-npm install markdown-it --no-save
-npm test
-```
-
-They run against real `markdown-it`, no VS Code required, which is the point: the
-plugin is where every interesting decision lives, and the VS Code wiring around it
-is three declarative keys in `package.json`.
