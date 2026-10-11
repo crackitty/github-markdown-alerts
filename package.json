@@ -2,7 +2,7 @@
   "name": "github-markdown-alerts",
   "displayName": "GitHub markdown alerts",
   "description": "Renders GitHub-style alerts (> [!NOTE], [!TIP], [!IMPORTANT], [!WARNING], [!CAUTION]) in the built-in markdown preview.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "crackitty",
   "license": "MIT",
   "icon": "images/icon.png",
